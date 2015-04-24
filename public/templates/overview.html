@@ -1,0 +1,7 @@
+<ul class="board-list" ng-if="'boards' | isState">
+    <li ng-repeat="board in boards">
+        <a ui-sref=".board({'board': board.slug})">{{board.name}}</a>
+    </li>
+</ul>
+
+<div ui-view></div>

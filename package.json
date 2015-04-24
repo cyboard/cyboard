@@ -1,0 +1,47 @@
+{
+  "name": "cyboard",
+  "version": "0.0.3",
+  "description": "Event driven wallboard server",
+  "author": "Michael van Engelshoven <michael@van-engelshoven.de>",
+  "license": "MIT",
+  "repository": "micha149/cyboard",
+  "main": "index.js",
+  "dependencies": {
+    "angular": "^1.3.15",
+    "angular-ui-router": "^0.2.13",
+    "autoprefixer-core": "^5.1.0",
+    "browserify": "^9.0.4",
+    "browserify-middleware": "^4.1.0",
+    "browserify-shim": "^3.8.3",
+    "css": "^2.2.0",
+    "debug": "^0.8.1",
+    "di": "~0.0.1",
+    "express": "^5.0.0-alpha.1",
+    "globby": "^2.0.0",
+    "jquery": "^2.1.3",
+    "lodash": "^3.7.0",
+    "node-sass": "^2.1.1",
+    "npm": "^2.5.0",
+    "oclazyload": "^0.5.1",
+    "path-to-regexp": "^1.0.3",
+    "q": "^1.1.2",
+    "rework-walk": "^1.0.0",
+    "send": "^0.11.1",
+    "serve-static": "^1.8.0",
+    "slug": "^0.8.0",
+    "socket.io": "^1.3.2",
+    "uglify-js": "^2.4.19"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "browserify-shim": {
+    "angular-bsfy": "global:angular",
+    "jquery": "global:jquery"
+  },
+  "browserify": {
+    "transform": [
+      "browserify-shim"
+    ]
+  }
+}

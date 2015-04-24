@@ -1,0 +1,4 @@
+<div class="board" slug="{{ currentBoard.slug }}">
+    <widget ng-repeat="widget in currentBoard.widgets" type="{{ widget.type }}" id="{{ widget.id}}" top="{{ widget.config.top }}" left="{{ widget.config.left }}"
+             width="{{ widget.config.width }}" height="{{ widget.config.height }}" data="widget.data"></widget>
+</div>

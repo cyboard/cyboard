@@ -1,0 +1,31 @@
+$vertical: 9;
+$horizontal: 16;
+$spacing: 10px;
+
+$pageBackground: #363D44;
+$fontColor: #fff;
+$widgetBackground: rgba(65, 73, 83, 0.80);
+
+@import "fonts";
+@import "widget";
+@import "board-list";
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: "Open Sans";
+    background: $pageBackground;
+    color: $fontColor;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+[ui-view], .board {
+    background: $pageBackground;
+    width: 100%;
+    height: 100%;
+}

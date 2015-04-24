@@ -1,0 +1,29 @@
+widget {
+    background: $widgetBackground;
+    position: absolute;
+    box-sizing: border-box;
+    padding: 20px;
+    overflow: hidden;
+
+    @for $i from 1 through $vertical {
+        // top position
+        &[top="#{$i}"] {
+            top: calc(#{100% / $vertical * ($i - 1)} + #{$spacing});
+        }
+        // height
+        &[height="#{$i}"] {
+            height: calc(#{100% / $vertical * $i} - #{$spacing * 2});
+        }
+    }
+
+    @for $i from 1 through $horizontal {
+        // left position
+        &[left="#{$i}"] {
+            left: calc(#{100% / $horizontal * ($i - 1)} + #{$spacing});
+        }
+        // width
+        &[width="#{$i}"] {
+            width: calc(#{100% / $horizontal * $i} - #{$spacing * 2});
+        }
+    }
+}
