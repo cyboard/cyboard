@@ -6,9 +6,11 @@ $pageBackground: #363D44;
 $fontColor: #fff;
 $widgetBackground: rgba(65, 73, 83, 0.80);
 
+@import "reset";
 @import "fonts";
 @import "widget";
 @import "board-list";
+@import "helpers";
 
 html {
     width: 100%;
@@ -17,14 +19,19 @@ html {
 
 body {
     font-family: "Open Sans";
-    background: $pageBackground;
+    background: black;
     color: $fontColor;
     width: 100%;
     height: 100%;
     margin: 0;
 }
 
-[ui-view], .board {
+[ui-view] {
+    width: 100%;
+    height: 100%;
+}
+
+.board {
     background: $pageBackground;
     width: 100%;
     height: 100%;
