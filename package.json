@@ -24,6 +24,7 @@
     "npm": "^2.5.0",
     "oclazyload": "^0.5.1",
     "path-to-regexp": "^1.0.3",
+    "postcss": "^4.1.11",
     "q": "^1.1.2",
     "rework-walk": "^1.0.0",
     "send": "^0.11.1",
