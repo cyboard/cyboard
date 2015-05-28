@@ -1,6 +1,6 @@
 {
   "name": "cyboard",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Event driven wallboard server",
   "author": "Michael van Engelshoven <michael@van-engelshoven.de>",
   "license": "MIT",
