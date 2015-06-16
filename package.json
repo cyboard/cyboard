@@ -19,7 +19,7 @@
     "express": "^5.0.0-alpha.1",
     "globby": "^2.0.0",
     "jquery": "^2.1.3",
-    "lodash": "^3.7.0",
+    "lodash": "^3.9.3",
     "node-sass": "^2.1.1",
     "npm": "^2.5.0",
     "oclazyload": "^0.5.1",
