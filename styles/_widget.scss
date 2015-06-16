@@ -2,7 +2,7 @@ widget {
     background: $widgetBackground;
     position: absolute;
     box-sizing: border-box;
-    padding: 20px;
+    padding: 2vh;
     overflow: hidden;
 
     @for $i from 1 through $vertical {
