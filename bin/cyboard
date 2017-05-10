@@ -1,0 +1,14 @@
+#!/usr/bin/env node
+
+// exit on SGINT, this is required to be able to abort when run in a docker container
+process.on('SIGINT', () => process.exit());
+
+process.on('unhandledRejection', (err) => console.error(err));
+
+if (process.env.NODE_ENV === 'production') {
+    require('../dist/cli.js'); // eslint-disable-line global-require
+} else {
+    process.env.NODE_ENV = process.env.NODE_ENV || 'development';
+    require('babel-register'); // eslint-disable-line import/no-extraneous-dependencies,global-require
+    require('../src/cli.js'); // eslint-disable-line global-require
+}

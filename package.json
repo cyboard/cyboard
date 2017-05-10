@@ -1,48 +1,77 @@
 {
   "name": "cyboard",
-  "version": "0.2.0",
+  "version": "1.0.0-alpha.12",
   "description": "Event driven wallboard server",
   "author": "Michael van Engelshoven <michael@van-engelshoven.de>",
   "license": "MIT",
   "repository": "micha149/cyboard",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "jsnext:main": "src/index.js",
+  "bin": {
+    "cyboard": "./bin/cyboard"
+  },
   "dependencies": {
-    "angular": "^1.4.8",
-    "angular-ui-router": "*",
-    "autoprefixer": "^6.1.2",
-    "browserify": "^12.0.1",
-    "browserify-middleware": "^7.0.0",
-    "browserify-shim": "^3.8.11",
-    "css": "^2.2.1",
-    "debug": "^0.8.1",
-    "di": "^0.0.1",
-    "express": "^4.13.3",
-    "globby": "^4.0.0",
-    "jquery": "^2.1.4",
-    "lodash": "^3.10.1",
-    "node-sass": "^3.4.2",
-    "npm": "^3.5.3",
-    "oclazyload": "^1.0.9",
-    "path-to-regexp": "^1.2.1",
-    "postcss": "^5.0.13",
-    "q": "^2.0.3",
-    "rework-walk": "^1.0.0",
-    "send": "^0.13.0",
-    "serve-static": "^1.10.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-react-app": "^3.1.0",
+    "commander": "^2.11.0",
+    "connect-history-api-fallback": "^1.5.0",
+    "debug": "^3.1.0",
+    "express": "^4.16.2",
+    "fela": "^6.0.5",
+    "html-webpack-plugin": "^2.30.1",
+    "interpret": "^1.0.4",
+    "invariant": "^2.2.2",
+    "liftoff": "^2.3.0",
+    "nodemon": "^1.12.1",
+    "prop-types": "^15.6.0",
+    "react": "^16.1.1",
+    "react-dom": "^16.1.1",
+    "react-fela": "^6.1.0",
+    "react-intl": "^2.4.0",
+    "react-router-dom": "^4.2.2",
+    "rxjs": "^5.5.2",
+    "serve-static": "^1.13.1",
     "slug": "^0.9.1",
-    "socket.io": "^1.3.7",
-    "uglify-js": "^2.6.1"
+    "webpack": "^3.8.1",
+    "webpack-dev-middleware": "^1.12.1",
+    "webpack-manifest-plugin": "^1.3.2",
+    "xhr2": "^0.1.4",
+    "yarn": "^1.3.2"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "NODE_ENV=production babel --ignore *.test.js --ignore *.test.jsx --out-dir dist src",
+    "test": "jest --coverage --env=jsdom",
+    "test:watch": "jest --coverage --watch --env=jsdom",
+    "lint": "eslint src/"
   },
-  "browserify-shim": {
-    "angular-bsfy": "global:angular",
-    "jquery": "global:jquery"
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-eslint": "^8.0.2",
+    "babel-jest": "^21.2.0",
+    "babel-plugin-dynamic-import-node": "^1.2.0",
+    "babel-plugin-syntax-dynamic-import": "^6.18.0",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.0",
+    "babel-register": "^6.26.0",
+    "babel-watch": "^2.0.7",
+    "eslint": "^3.19.0",
+    "eslint-config-brainbits-jest": "^0.3.1",
+    "eslint-config-brainbits-react": "^0.3.1",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jest": "^20.0.3",
+    "eslint-plugin-jsx-a11y": "^5.1.1",
+    "eslint-plugin-react": "^7.5.1",
+    "jest": "^21.2.1",
+    "source-map-explorer": "^1.5.0"
   },
-  "browserify": {
-    "transform": [
-      "browserify-shim"
+  "babel": {
+    "presets": [
+      "react-app"
+    ],
+    "plugins": [
+      "syntax-dynamic-import",
+      "dynamic-import-node",
+      "transform-es2015-modules-commonjs"
     ]
   }
 }

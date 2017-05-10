@@ -1,0 +1,5 @@
+coverage
+src/**/*.test.js
+dist/**/*.test.js
+src/**/*.test.jsx
+dist/**/*.test.jsx
