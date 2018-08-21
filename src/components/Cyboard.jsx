@@ -1,11 +1,14 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
-import { IntlProvider } from 'react-intl';
+import { IntlProvider, addLocaleData } from 'react-intl';
+import de from 'react-intl/locale-data/de';
 import PropTypes from '../CustomPropTypes';
 import { Wallboard as Board } from './Wallboard';
 import BoardsOverview from './BoardsOverview';
 import { parseConfig } from '../parseConfig';
 import RenderBoard from '../standardLayout/Board';
+
+addLocaleData(...de);
 
 export class Cyboard extends Component {
 
@@ -41,7 +44,7 @@ export class Cyboard extends Component {
         const WrappedBoardsOverview = () => <BoardsOverview boards={Object.values(this.config)} />;
 
         return (
-            <IntlProvider>
+            <IntlProvider locale="de-DE">
                 <Router>
                     <div>
                         {[
